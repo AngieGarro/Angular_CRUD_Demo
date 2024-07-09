@@ -1,0 +1,33 @@
+<div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of itemList; track item.id) {
+                <tr>
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.name}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.stock}}</td>
+                    <td>{{item.category?.name}}</td>
+                </tr>
+                } @empty {
+                <tr>
+                    <td colspan="6" class="text-center">There are not items to show</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+  </div>
+  

@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div>
+      <h2>Views Categories</h2>
+    </div>
+    <div>
+      @defer {
+      <app-categories-view-list></app-categories-view-list>
+      } @loading (after 100ms; minimum 1s){
+      <app-loader></app-loader>
+      }
+    </div>
+  </div>
